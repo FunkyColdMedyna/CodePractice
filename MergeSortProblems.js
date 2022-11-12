@@ -56,8 +56,11 @@ const mergeSort = (arr) => {
 
     //declare your middle point 
     let mid = Math.floor(arr.length/2);
+    //declare left half through slicing original array stoppping at mid point
     let left = mergeSort(arr.slice(0, mid));
+    // declare right by slicing remainder of array
     let right = mergeSort(arr.slice(mid));
+    //return merged left and right with help of merge helper function
     return merge(left, right); 
 }
 
