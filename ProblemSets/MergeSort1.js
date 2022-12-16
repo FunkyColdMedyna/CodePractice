@@ -96,17 +96,20 @@ console.log(data[0].results.payload[0]); // profile -> jenny
 console.log(data[0].results.payload[0].profile.rank); // 3
 console.log(data[0].results.payload[0].profile.favorites) //[ {top gun},  {mavericks}]
 console.log(data[0].results.payload[0].profile.favorites[0].rating) //7
+console.log(data[0].results.payload[1]) 
 
 let collection = [];
+function mergeSortPayload(data) {
 
-for ( let i in data[0].results) {
-    collection.push(data[0].results[i])
+    data[0].ressults.forEach(payload => {
+        collection.push(payload)
+    });
+        
+    
 }
-collection.flat(0)
+
+console.log(mergeSortPayload(data));
 console.log(collection)
-
-
-
 
 //helper function to compare values? 
 // const compare  = ( a , b) => {
